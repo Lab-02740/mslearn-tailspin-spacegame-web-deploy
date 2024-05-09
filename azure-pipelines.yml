@@ -76,6 +76,15 @@ stages:
     - publish: '$(Build.ArtifactStagingDirectory)'
       artifact: drop
 
+
+    - task: CmdLine@2
+      displayName: 'DEBUG: show build reason'
+      inputs:
+        script: |
+          echo "Build Reason:"
+          echo "  $(build.reason)"
+
+
 - stage: 'Dev'
   displayName: 'Deploy the dev environment'
   dependsOn: Build
