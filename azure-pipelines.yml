@@ -1,5 +1,5 @@
 trigger:
-- none
+- '*'
 
 variables:
   buildConfiguration: 'Release'
@@ -7,8 +7,8 @@ variables:
 
 
 schedules:
-- cron: '45 8 * * *'
-  displayName: 'Deploy every day at 8.45 AM'
+- cron: '0 9 * * *'
+  displayName: 'Deploy every day at 9 AM'
   branches:
     include:
     - release
