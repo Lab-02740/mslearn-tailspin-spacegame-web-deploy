@@ -7,8 +7,8 @@ variables:
 
 
 schedules:
-- cron: '0 10 10 5 5'
-  displayName: 'Deploy 5/10 fridays'
+- cron: '0 10 14 5 2'
+  displayName: 'Deploy (10gmt)3pst.5/14.tues'
   branches:
     include:
     - release
@@ -119,7 +119,7 @@ stages:
 - stage: 'Test'
   displayName: 'Deploy to the test environment'
   dependsOn: Dev
-  #condition: eq(variables['Build.Reason'], 'Schedule')
+  condition: eq(variables['Build.Reason'], 'Schedule')
   jobs:
   - deployment: Deploy
     pool:
