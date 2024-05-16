@@ -45,8 +45,7 @@ namespace UITests
                         Environment.GetEnvironmentVariable("EdgeWebDriver"),
                         new EdgeOptions
                         {
-                            UseChromium = true,
-                            UseWebView = true
+                            UseChromium = true
                         }
                     );
                     break;
