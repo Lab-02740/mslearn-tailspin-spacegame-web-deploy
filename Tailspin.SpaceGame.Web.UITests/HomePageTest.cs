@@ -56,7 +56,7 @@ namespace UITests
                 // Wait until the page is fully loaded on every page navigation or page reload.
                 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
 
-                // Navigate to the site.
+                //  Navigate to the site.
                 // The site name is stored in the SITE_URL environment variable to make 
                 // the tests more flexible.
                 string url = Environment.GetEnvironmentVariable("SITE_URL");
