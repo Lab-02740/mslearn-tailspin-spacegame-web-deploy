@@ -119,7 +119,7 @@ stages:
     dependsOn: Deploy
     displayName: 'Run UI tests'
     pool:
-      vmImage: 'windows-2010'
+      vmImage: 'windows-latest'
     variables:
     - group: 'Release'
     steps: 
