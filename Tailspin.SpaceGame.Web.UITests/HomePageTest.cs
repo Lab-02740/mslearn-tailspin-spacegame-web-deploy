@@ -11,7 +11,7 @@ namespace UITests
 {
     [TestFixture("Chrome")]
     [TestFixture("Firefox")]
-    // [TestFixture("Edge")]
+    [TestFixture("Edge")]
     public class HomePageTest
     {
         private string browser;
@@ -45,7 +45,7 @@ namespace UITests
                         Environment.GetEnvironmentVariable("EdgeWebDriver"),
                         new EdgeOptions
                         {
-                            UseChromium = true
+                            UseChromium = false
                         }
                     );
                     break;
